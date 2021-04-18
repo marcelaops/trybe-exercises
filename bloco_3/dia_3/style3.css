@@ -1,0 +1,33 @@
+h1, p{
+    text-align: center;
+}
+li:hover{
+    background-color: salmon;
+}
+li:active{
+    font-family: fantasy;
+}
+
+div:hover{
+    border-style:dotted;
+    border-width: thin;
+}
+#cor-primaria{
+    background-color: blue;
+}
+#cor-secundaria{
+    background-color: purple;
+}
+#cor-complementar{
+    background-color: pink ;
+    padding: 30px;
+}#cor-escura{
+    background-color: brown;
+}
+#cor-clara{
+    background-color: salmon;
+}
+h3{
+    font-family: monospace;
+    font-style: italic;
+}
