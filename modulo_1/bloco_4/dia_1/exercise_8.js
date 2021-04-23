@@ -2,11 +2,11 @@ let a=2;
 let b=7;
 let c=3;
 
-let impar = false;
+let par = false;
 
 if(a%2==0 || b%2==0 || c%2==0){
-    impar=true;
+    par=true;
 } 
 
-console.log(impar);
+console.log(par);
 
