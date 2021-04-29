@@ -19,6 +19,8 @@
     height: 400px;
     margin: 56px 0;
     width: 400px;
+    background-color: salmon;
+   
   }
   
   .emergency-tasks div {
@@ -28,12 +30,14 @@
     color: white;
     margin-top: 10px;
     padding: 10px;
+    background-color: blueviolet;
   }
   
   .no-emergency-tasks {
     display: inline-block;
     height: 400px;
     width: 400px;
+    background-color: yellow;
   }
   
   .no-emergency-tasks div {
@@ -44,6 +48,7 @@
     color: white;
     margin-top: 10px;
     padding: 10px;
+    background-color: black;
   }
   
   #footer-container {
