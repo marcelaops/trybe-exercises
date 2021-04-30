@@ -47,7 +47,7 @@
 
      1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)*/
         function changeTextP(){
-          let HowISeeMe = document.getElementsByTagName('p')[1].innerText = "Trabalhando como dev."
+          let HowISeeMe = document.getElementsByTagName('p')[1].innerHTML = "Trabalhando como dev."
         }
         changeTextP();
     
@@ -62,9 +62,13 @@
             let redToWhite = document.getElementsByClassName('center-content')[0].style.background = 'white';
         } 
         changeColorFromRed();
-        
+
      // 4. Crie uma função que corrija o texto da tag <h1>. */
- 
+        function correctText(){
+            let textH1 = document.getElementsByTagName('h1')[0].innerHTML = 'Exercício 5.1 - JavaScript';
+        }
+        correctText();
+
      // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/
  
      // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.*/
