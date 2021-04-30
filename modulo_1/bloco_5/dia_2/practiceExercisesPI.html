@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios Práticos do dia 5.2</title>
+    <title>Exercícios Práticos do dia 5.2 Parte I</title>
 </head>
 <body>
    <div id="paiDoPai">
@@ -21,10 +21,10 @@
     
     <script>
         //1. Acesse o elemento elementoOndeVoceEsta 
-        console.log(document.querySelector('#elementoOndeVoceEsta').parentNode);
+        const elementoOndeVoceEsta = console.log(document.querySelector('#elementoOndeVoceEsta').parentElement);
         
         //2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-
+        const father = document.querySelector('#elementoOndeVoceEsta').parentElement.style.background = 'red';
 
         //3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
 
