@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Exercício 1
+      const h1 = document.createElement('h1');
+      h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(h1);
+
+      //Exercício 2
+      const div1 = document.createElement('div');
+      div1.className = 'main-content';
+      document.body.appendChild(div1);
+
+      //Exercício 3
+      const div2 = document.createElement('div');
+      div2.className = 'center-content';
+      div1.appendChild(div2);
+
+      //Exercício 4
+      const paaragraph = document.createElement('p');
+      paaragraph.innerHTML = 'Parágrafo para o exercício 4, dentro da div2';
+      div2.appendChild(paaragraph);
+
+      //Exercício 5
+      const div3 = document.createElement('div');
+      div3.className = 'left-content';
+      div1.appendChild(div3);
+
+      //Exercício 6
+      const div4 = document.createElement('div');
+      div4.className = 'right-content';
+      div1.appendChild(div4);
+
+      //Exercício 7
+      const image = document.createElement('img');
+      image.className = 'small-image';
+      image.src ='https://picsum.photos/200';
+      div3.appendChild(image);
+
+      //Exercício 8
+      const valoresExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      const valoresExtensoList = document.querySelector('valoresExtenso');
+
+      for(let index = 0; index < valoresExtenso.length; index+=1){
+          let valores = valoresExtenso[index];
+          let valoresExtensoItem = document.createElement('li');
+          valoresExtensoItem.innerHTML = valores;
+          div4.appendChild(valoresExtensoItem);
+      };
+
+      //Ercício 9
+      for(let index = 0; index < 3; index += 1){
+          const tagH3 = document.createElement('h3');
+          tagH3.innerHTML = 'Oi' + index;
+          div2.appendChild(tagH3);
+      };
+
+      //Parte 2 - alterações e remoções
+      //Exercício 1
+      const classTitle = document.getElementsByTagName('h1')[0];
+      classTitle.className = 'title';
+      
+      //Exercício 2
+      const classDescription = document.getElementsByTagName('h3');
+      for (let index  = 0; index < 3; index +=1){
+          classDescription[index].className = 'description';
+      }
+
+      //Exercício 3
+      const remove = document.getElementsByClassName('left-content')[0];
+      div1.removeChild(remove);
+
+      //Exercício 4
+      const centraliza = document.getElementsByClassName('right-content')[0];
+      centraliza.style.marginRight = 'auto';
+
+      //Exercício 5
+      const changeColor = document.getElementsByClassName('center-content')[0];
+      changeColor.style.background = 'green';
+
+      //Exercício 6
+      div4.lastChild.remove();
+      div4.lastChild.remove();
+
+    </script>
+  </body>
+</html>
