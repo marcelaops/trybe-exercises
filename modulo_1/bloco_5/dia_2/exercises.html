@@ -93,6 +93,17 @@
       image.src ='https://picsum.photos/200';
       div3.appendChild(image);
 
+      //Exercício 8
+      const valoresExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      const valoresExtensoList = document.querySelector('valoresExtenso');
+
+      for(let index = 0; index < valoresExtenso.length; index+=1){
+          let valores = valoresExtenso[index];
+          let valoresExtensoItem = document.createElement('li');
+          valoresExtensoItem.innerHTML = valores;
+          div4.appendChild(valoresExtensoItem);
+      }
+
     </script>
   </body>
 </html>
