@@ -102,14 +102,21 @@
           let valoresExtensoItem = document.createElement('li');
           valoresExtensoItem.innerHTML = valores;
           div4.appendChild(valoresExtensoItem);
-      }
+      };
 
       //Ercício 9
       for(let index = 0; index < 3; index += 1){
           const tagH3 = document.createElement('h3');
           tagH3.innerHTML = 'Oi' + index;
           div2.appendChild(tagH3);
-      }
+      };
+
+      //Parte 2 - alterações e remoções
+      //Exercício 1
+      const classTitle = document.getElementsByTagName('h1')[0];
+      classTitle.className = 'title';
+      
+
 
     </script>
   </body>
