@@ -67,4 +67,17 @@ function maiorValor (arrayInteiros){
     }
     return indiceDeMaiorValor;
 }
-console.log (maiorValor([2, 3, 6, 7, 10, 1]))
+// console.log (maiorValor([2, 3, 6, 7, 10, 1]))
+
+//Exercício 3
+function menorValor (arrayInteiros) {
+    let indiceDeMenorValor = 0;
+
+    for (let index in arrayInteiros){
+        if (arrayInteiros[index] < arrayInteiros[indiceDeMenorValor]) {
+            indiceDeMenorValor = index;
+        }    
+    }
+    return indiceDeMenorValor;
+}
+console.log(menorValor([2, 4, 6, 7, 10, 0, -3]));
