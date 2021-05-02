@@ -80,4 +80,18 @@ function menorValor (arrayInteiros) {
     }
     return indiceDeMenorValor;
 }
-console.log(menorValor([2, 4, 6, 7, 10, 0, -3]));
+// console.log(menorValor([2, 4, 6, 7, 10, 0, -3]));
+
+//Exercício 4
+function maiorQuantCaracteres (array) {
+    let maiorNome = '';
+
+    for (let index in array){
+        if (array[index].length > maiorNome.length){
+            maiorNome = array[index]; 
+        }
+    }
+
+    return maiorNome; 
+}
+console.log (maiorQuantCaracteres(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana', 'Marcela']));
