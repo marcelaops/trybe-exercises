@@ -28,21 +28,34 @@
 //FOR/IN
 
 // Exercício 1
-let names = {
-    person1: 'João',
-    person2: 'Maria',
-    person3: 'Jorge' 
-  };
-for (let key in names) {
-    console.log('Olá ' + names[key]);
-}
+// let names = {
+//     person1: 'João',
+//     person2: 'Maria',
+//     person3: 'Jorge' 
+//   };
+// for (let key in names) {
+//     console.log('Olá ' + names[key]);
+// }
 
-//Exercício 2
-let car = {
-    model: 'A3 Sedan',
-    manufacturer: 'Audi',
-    year: 2020
-};
-for (let key in car) {
-    console.log(key + ': ' +car[key]);
+// //Exercício 2
+// let car = {
+//     model: 'A3 Sedan',
+//     manufacturer: 'Audi',
+//     year: 2020
+// };
+// for (let key in car) {
+//     console.log(key + ': ' +car[key]);
+// }
+
+//FUNÇÕES
+//// Adição
+function adicao (param1, param2){
+    return param1 + param2;
 }
+console.log(adicao(5, 2));
+
+// Função Perimetro
+function area (base, altura){
+    return ((base * altura) / 2);
+}
+console.log(area(4,2));
