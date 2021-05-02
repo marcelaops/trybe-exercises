@@ -54,4 +54,17 @@ let palindromo = true;
     }
     return palindromo;
 }
-console.log(verificaPalindromo('arara'));
+// console.log(verificaPalindromo('arara'));
+
+//Exercício 2
+function maiorValor (arrayInteiros){
+    let indiceDeMaiorValor = 0;
+
+    for (let index in arrayInteiros){
+        if (arrayInteiros[index] > arrayInteiros[indiceDeMaiorValor]) {
+            indiceDeMaiorValor = index;
+        }    
+    }
+    return indiceDeMaiorValor;
+}
+console.log (maiorValor([2, 3, 6, 7, 10, 1]))
