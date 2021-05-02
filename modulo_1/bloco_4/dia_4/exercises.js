@@ -94,4 +94,27 @@ function maiorQuantCaracteres (array) {
 
     return maiorNome; 
 }
-console.log (maiorQuantCaracteres(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana', 'Marcela']));
+// console.log (maiorQuantCaracteres(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana', 'Marcela']));
+
+//Ecercício 5
+function quantDeVezesInteiros (array) {
+let contRepti = 0;
+let contador = 0;
+let indexNumeRepe = 0;
+
+    for (let index in array) {
+        let verificaNum = array[index];
+        for (let index2 in array){
+            if (verificaNum === array[index2]){
+                contador += 1;
+            }
+        } 
+        if (contador > contRepti) {
+            contRepti = contador; 
+            indexNumeRepe = index;
+        }
+        contador = 0;
+    } 
+    return array[indexNumeRepe];
+}
+console.log(quantDeVezesInteiros([2, 3, 2, 5, 8, 2, 3]));
