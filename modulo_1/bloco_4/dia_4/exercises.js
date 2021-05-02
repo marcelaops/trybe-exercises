@@ -1,11 +1,11 @@
 //PARTE I - OBJETOS E FOR/IN
-let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-    //Exercício 2
-    recorrente: 'Sim'
-  };
+// let info = {
+//     personagem: 'Margarida',
+//     origem: 'Pato Donald',
+//     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+//     //Exercício 2
+//     recorrente: 'Sim'
+//   };
  
 //Exercício 1
 // console.log('Bem vinda, ' + info.personagem);
@@ -25,18 +25,33 @@ let info = {
 // }
 
 //Exercícios 5
-let info2 = {
-    personagem: 'Tio Patinhas',
-    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
-    nota: 'O último MacPatinhas',
+// let info2 = {
+//     personagem: 'Tio Patinhas',
+//     origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+//     nota: 'O último MacPatinhas',
     //Exercício 2
-    recorrente: 'Sim'
-} 
+//     recorrente: 'Sim'
+// } 
 
-for (let key in info){
-    if (info[key] === info.recorrente && info[key] === 'Sim' && info2[key] === 'Sim' ) {
-        console.log('Ambos recorrentes');
-    } else {
-        console.log(info[key] + ' e ' + info2[key]);
+// for (let key in info){
+//     if (info[key] === info.recorrente && info[key] === 'Sim' && info2[key] === 'Sim' ) {
+//         console.log('Ambos recorrentes');
+//     } else {
+//         console.log(info[key] + ' e ' + info2[key]);
+//     }
+// }
+
+//PARTE II - FUNÇÕES
+//EXERCÍCIOS 1
+function verificaPalindromo (string) {
+let letras = string.split('');
+let palindromo = true;
+
+    for (let index in letras){
+        if (letras[index] != string[(string.length - 1) - index]){
+        palindromo = false;
+    } 
     }
+    return palindromo;
 }
+console.log(verificaPalindromo('arara'));
