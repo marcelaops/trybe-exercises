@@ -8,7 +8,12 @@ let info = {
   };
  
 //Exercício 1
-console.log('Bem vinda, ' + info.personagem);
+// console.log('Bem vinda, ' + info.personagem);
 
 //Exercício 2
-console.log(info);
+// console.log(info);
+
+//Exercício 3
+for (let key in info) {
+    console.log(key);
+}
