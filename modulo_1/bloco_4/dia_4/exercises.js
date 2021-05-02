@@ -117,4 +117,14 @@ let indexNumeRepe = 0;
     } 
     return array[indexNumeRepe];
 }
-console.log(quantDeVezesInteiros([2, 3, 2, 5, 8, 2, 3]));
+// console.log(quantDeVezesInteiros([2, 3, 2, 5, 8, 2, 3]));
+
+//Exercícios 6
+function somatorio (inteiroN){
+let soma = 0;
+    for (let index = 1; index <= inteiroN; index += 1){
+        soma += index;
+    }
+    return soma;
+}
+console.log (somatorio(5));
