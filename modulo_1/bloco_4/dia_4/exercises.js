@@ -127,4 +127,20 @@ let soma = 0;
     }
     return soma;
 }
-console.log (somatorio(5));
+// console.log (somatorio(5));
+
+// //Exercícios 7
+function verificaFinal (stringWord, stringEnding) {
+stringWord = stringWord.split('');
+stringEnding = stringEnding.split('');
+let control = true; 
+
+    for (let index = 0; index < stringEnding.length; index += 1 ){
+        if (stringWord[stringWord.length - stringEnding.length + index] != stringEnding[index]) {
+            control = false;
+        }
+    }
+    return control;
+}
+
+console.log(verificaFinal('trybe', 'be'));
