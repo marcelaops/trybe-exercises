@@ -23,45 +23,69 @@
         // //1. Acesse o elemento elementoOndeVoceEsta 
         // const elementoOndeVoceEsta =  document.getElementById('elementoOndeVoceEsta');
         
-        // //2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-        // const father = elementoOndeVoceEsta.parentElement.style.color = 'red';
+        // // //2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        // const father = elementoOndeVoceEsta.parentElement;
+        // father.style.color = 'red';
 
         // //3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-        // const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild.innerText = 'Primeiro neto';
+        // const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+        // primeiroFilhoDoFilho.innerText = 'Primeiro filho do filho';
 
         // //4. Acesse o primeiroFilho a partir de pai .
-        // // const primeiroFilho = father.firstElementChild;
+        // const primeiroFilho = father.firstElementChild;
 
         // //5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
-        // const primeiroFilho = elementoOndeVoceEsta.previousSibiling;
+        // const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
 
         // //6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
         // const atencao = elementoOndeVoceEsta.nextSibling;
 
         // //7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
-        // const thirdSon = elementoOndeVoceEsta.nextElementSibling;
+        // const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
         // //8. Agora acesse o terceiroFilho a partir de pai .
-        // const thirdSonFromFather = father.lastElementChild.previousSibiling;
+        // const terceiroFilho2 = father.lastElementChild.previousElementSibling;
 
       
         //Parte II - Criando elementos
         // 1. Crie um irmão para elementoOndeVoceEsta .
         const pai = document.getElementById('pai');
         const brotherOfElementoOndeVoceEsta= document.createElement('div');
-        brotherOfElementoOndeVoceEsta.id ='brotherOfElementoOndeVoceEsta';
+        brotherOfElementoOndeVoceEsta.innerHTML ='Irmão do Elemento onde eu estou';
         pai.appendChild(brotherOfElementoOndeVoceEsta);
 
         // 2. Crie um filho para elementoOndeVoceEsta .
-        
+        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+        const filhoElementoOndeEstou = document.createElement ('div');
+        filhoElementoOndeEstou.innerHTML = 'Filho do elemento onde eu estou';
+        elementoOndeVoceEsta.appendChild(filhoElementoOndeEstou);
 
         // 3. Crie um filho para primeiroFilhoDoFilho .
-
+        const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        const filho = document.createElement('div');
+        filho.innerHTML = 'Filho para o primeiro filho do filho';
+        primeiroFilhoDoFilho.appendChild(filho);  
 
         // 4. A partir desse filho criado, acesse terceiroFilho .
+        const terceiroFilho = filho.parentElement.parentElement.nextElementSibling;
+        console.log(terceiroFilho); //dá p ver no console.
 
         //Parte III - Removendo elementos
         //Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+        // const pai = document.getElementById('pai');
+        //n consegui fazer, o gabarito está assim:
+        const pai = document.getElementById('pai');
+
+        for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+          const currentChildren = pai.childNodes[index];
+          if (currentChildren.id !== 'elementoOndeVoceEsta') {
+            currentChildren.remove();
+          }
+        }
+
+        const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+        segundoEUltimoFilhoDoFilho.remove();
+
 
     </script>
 </div> 
