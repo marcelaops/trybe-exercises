@@ -1,21 +1,25 @@
-// console.log(document.getElementById("page-title").innerText);
-
-// console.log(document.getElementById("second-paragraph").innerText = "Segundo parágrafo alterado");
-
-// console.log(document.getElementById("subtitle").innerText = "Subtítulo alterado");
-
-// console.log(document.getElementsByClassName('paragraph'));
-// console.log(document.getElementsByClassName('paragraph')[0].style.border = 'solid');
-// console.log(document.getElementsByTagName('h4')[0].style.color = 'red');
-
-// console.log(document.querySelectorAll('paragraph'));
-// console.log(document.querySelector('.paragraph').style.background = 'red');
-// console.log(document.querySelectorAll('.paragraph')[1].style.background = 'red');
-
 // Parte III - Qual seletor usar?
+// const body = document.getElementById('container');
 
-console.log(document.getElementById('header-container').style.backgroundColor ='green');
+const header = document.getElementById('header-container');
+header.style.backgroundColor = 'green';
 
-// Nâo está dando certo esse aí 
-// console.log(document.getElementsByClassName("emergency-tasks").style.backgroundColor = 'pink');
+const emergencyTasks = document.getElementsByClassName('emergency-tasks')[0];
+emergencyTasks.style.backgroundColor = 'salmon';
+
+const noEmergencyTasks = document.getElementsByClassName('no-emergency-tasks')[0];
+noEmergencyTasks.style.backgroundColor = 'yellow';
+
+const emergencyTasksHeader = document.querySelectorAll('.emergency-tasks h3');
+for (let index = 0; index < emergencyTasksHeader.length; index += 1){
+    emergencyTasksHeader[index].style.backgroundColor = 'violet';
+}
+
+const noEmergencyTasksHeader = document.querySelectorAll('.no-emergency-tasks h3');
+for (let index = 0; index < noEmergencyTasksHeader.length; index += 1){
+    noEmergencyTasksHeader[index].style.backgroundColor = 'black';
+}
+
+const footer = document.getElementById('footer-container');
+footer.style.backgroundColor = 'green';
 
