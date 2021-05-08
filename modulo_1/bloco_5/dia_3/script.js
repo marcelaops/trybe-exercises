@@ -46,20 +46,39 @@ createDaysOfTheWeek();
   createDaysOfTheMonth();
 
   
-//Exercício 2 - Exercício 2: Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
-// Adicione a este botão a ID "btn-holiday" .
-// Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
-// Nesse exercício eu assisti o videozinho do gabarito. QUando ele descria o que tinha q sewr feito, eu pausava o vídeo, fazia e retormava para ver se estava fazendo certo.
-function holidayButton (buttonName) {
+//Exercício 2 - Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+function holidayButton(buttonName) {
   let buttonsContainer = document.getElementsByClassName('buttons-container')[0];
-  let newButton = buttonsContainer.createElement('buton');
-  newButton.id = 'btn=holiday';
-  newButton.innerHTML = buttonName.
+  let newButton = document.createElement('button');
+  
+  newButton.innerHTML = buttonName;
+  newButton.id = 'btn-holiday';
   buttonsContainer.appendChild(newButton);
 }
 holidayButton('Feriados');
 
-//Exercício 3
+
+//Exercício 3 - Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+// OLhei completamente o gabarito e entendi tudo. 
+
+function addButtonHolidayEvent() {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday')
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  getHolidayButton.addEventListener('click', function() {
+    for (let index = 0; index < getHolidays.length; index += 1) {
+      if (getHolidays[index].style.backgroundColor === setNewColor) {
+        getHolidays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolidays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  })
+};
+addButtonHolidayEvent();
+
 
 //Exercício 4
 
