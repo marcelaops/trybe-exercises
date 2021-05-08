@@ -80,7 +80,16 @@ function addButtonHolidayEvent() {
 addButtonHolidayEvent();
 
 
-//Exercício 4
+//Exercício 4 Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+function fridayButton(buttonName) {
+  let buttonsContainer = document.getElementsByClassName('buttons-container')[0];
+  let newButton = document.createElement('button');
+
+  newButton.innerHTML = buttonName;
+  newButton.id = 'btn-friday';
+  buttonsContainer.appendChild(newButton);
+}
+fridayButton('Sexta-feira');
 
 //Exercício 5
 
