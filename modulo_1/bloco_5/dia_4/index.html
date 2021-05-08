@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +8,54 @@
     <title>Exercise 5.4 - Leitor de Conteúdo</title>
 </head>
 <style>
-#body {
-
-}
-
-#paragraph {
-
-}
+    #body {
+        margin: 50px;   
+    }
 
 </style>
 <body id='body'>
-    <p id='paragraph'>
-        What is Lorem Ipsum? <br><br>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+    <section id="buttons-section">
+        <div id="buttons-background-color">
+            <span>Cor de fundo</span>
+            <button>Cinza</button>
+            <button>Creme</button>
+        </div>
+        <div id="buttons-text-color">
+            <span>Cor do texto</span>
+            <button>Cinza</button>
+            <button>Creme</button>
+        </div>
+        <div id="text-size">
+            <span>Tamanho da fonte</span>
+            <button>12pt</button>
+            <button>20pt</button>
+        </div>
+        <div id="space">
+            <span>Espaçamento entre as linhas</span>
+            <button>normal</button>
+            <button>1,5</button>
+        </div>
+        <div id="font-type">
+            <span>Tipo de fonte</span>
+            <button>Arial</button>
+            <button>monospace</button>
+        </div>
+    </section>
+    <section id="highlighters-section">
+        <h1 class="highlighters">What is Lorem Ipsum?</h1> <br><br>
+        <h3 class="highlighters3">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." <br>
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h3>
+    </section>
+    <div id='paragraph'> 
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+</div>
 </body>
 <script>
-    
+    window.onload = function(){
+        
+
+    }
 </script>
 </html>
