@@ -6,31 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6.1 - Formulário de currículo</title>
+    <link rel='stylesheet' href='style.css'/>
 </head>
 <body>
-    <h1>Formulário de currículo</h1>
-    <form action="" method="GET">
-        <fieldset>
+    <header class='speaker-form-header'>
+        <h1>Formulário de currículo</h1>
+    </header>
+    <form action="" method="GET" class="speaker-form">
+        <fieldset class="line-content">
             <legend>Dados Pessoais</legend>
-            <p>Nome</p>
-            <input type="text" name="usuario" maxlength="40" required>
-            <p>Email</p>
-            <input type="email" maxlength="50" required>
-            <p>CPF</p>
-            <input type="text" maxlength="11" required>
-            <p>Endereço</p>
-            <input type="text" maxlength="200" required>
-            <p>Cidade</p>
-            <input type="text" maxlength="28" required>
-            <br><br>
-            <label for="estados">Estado</label>
-                <select name="estado" id="estados" required>
-                </select>
-            <br><br> 
-            <p>Tipo</p>   
-            <label for="casa"><input type="radio" id="casa">Casa</label> 
-            <label for="apt"><input type="radio" id="apt">Apartamento</label> 
-        
+            <div>
+                <label for="full-name">Nome</label>
+                <input type="text" name="name" id="full-name" placeholder="Coloque seu nome completo" maxlength="40" required>
+            </div>
+            <div>
+                <label for="e-mail">Email</label>
+                <input type="email" name="e-mail" maxlength="50" id="e-mail" required>
+            </div>
+            <div>
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" maxlength="11" required id="cpf">
+            </div>        
+            <div>
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" maxlength="200" required>
+            </di>
+           <div>
+                <label for="cidade">Cidade</label>
+               <input type="text" name="cidade" id="cidade" maxlength="28" required>
+           </div>
+           <div>
+               <label for="estados">Estado</label>
+               <select name="estado" id="estados" required>
+               </select>
+           </div>
+           <div>
+               <p>Tipo de moradia:</p>   
+               <label for="tipo1">
+                   <input type="radio" name="tipo" id="tipo1" value="casa">Casa</label> 
+               <label for="tipo2">
+                   <input type="radio" name="tipo" id="tipo2" value="apt">Apartamento</label> 
+           </div> 
         </fieldset>
         <br><br>
         <fieldset>
