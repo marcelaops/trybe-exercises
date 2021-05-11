@@ -9,7 +9,35 @@
 </head>
 <body>
     <h1>Formulário de currículo</h1>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>Nome</p>
+            <input type="text" name="usuario" maxlength="40" required>
+            <p>Email</p>
+            <input type="email" maxlength="50" required>
+            <p>CPF</p>
+            <input type="text" maxlength="11" required>
+            <p>Endereço</p>
+            <input type="text" maxlength="200" required>
+            <p>Cidade</p>
+            <input type="text" maxlength="28" required>
+            <br><br>
+            <label for="estados">Estado</label>
+                <select name="estado" id="estados" required>
+                </select>
+            <br><br> 
+            <p>Tipo</p>   
+            <label for="casa"><input type="radio" id="casa">Casa</label> 
+            <label for="apt"><input type="radio" id="apt">Apartamento</label> 
+        
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <label>Último emprego</label>
+        </fieldset>
 
+    </form>
 
 
 
