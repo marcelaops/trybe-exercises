@@ -29,7 +29,7 @@ function checandoData() {
         alert('A data de início não tem um formato válido, que é dd/mm/aaaa, tente novamente.');
     }
 }
-checandoData();
+//Tem que chamar ela qd eu fizer o botão enviar, aí embaixo no exercício 3. 
 
 //Exer 3
 // function enviarSubmissao(event) {
