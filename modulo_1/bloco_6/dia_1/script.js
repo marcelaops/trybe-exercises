@@ -14,3 +14,19 @@ function addOptionsStates() {
 }
 addOptionsStates();
 
+function checandoData() {
+    const data = document.querySelector('#data-inicio');
+    
+    let testandoData = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;  //Regular expression its a way to validate dates in JS, source: https://cutt.ly/fbDQp3m
+    //Formato da expressão regular dd/mm/aaaa visto em https://www.w3resource.com/javascript/form/javascript-date-validation.php
+
+    if (data.value.length ===0){
+        alert('A data nâo foi preenchida.');
+    } else if(testandoData.test(data)) {
+        return true;
+        //se entrar aqui é pq segue as condiçõe de ser uma data.
+    } else {
+        alert('A data não tem um formato válido, que é dd/mm/aaaa, tente novamente.');
+    }
+}
+checandoData();

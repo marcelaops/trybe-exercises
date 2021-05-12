@@ -13,34 +13,34 @@
         <h1>Formulário de currículo</h1>
     </header>
     <form action="" method="GET" class="speaker-form">
-        <fieldset class="line-content">
+        <fieldset>
             <legend>Dados Pessoais</legend>
-            <div>
+            <div class="line-content">
                 <label for="full-name">Nome</label>
-                <input type="text" name="name" id="full-name" placeholder="Coloque seu nome completo" maxlength="40" required>
+                <input type="text" name="name1" id="full-name" placeholder="Coloque seu nome completo" maxlength="40" required>
             </div>
-            <div>
+            <div class="line-content">
                 <label for="e-mail">Email</label>
-                <input type="email" name="e-mail" maxlength="50" id="e-mail" required>
+                <input type="email" name="e-mail1" maxlength="50" id="e-mail" required>
             </div>
-            <div>
+            <div class="line-content">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" maxlength="11" required id="cpf">
+                <input type="text" name="cpf1" maxlength="11" required id="cpf">
             </div>        
-            <div>
+            <div class="line-content">
                 <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" maxlength="200" required>
+                <input type="text" name="endereco1" id="endereco" maxlength="200" required>
             </di>
-           <div>
-                <label for="cidade">Cidade</label>
-               <input type="text" name="cidade" id="cidade" maxlength="28" required>
+           <div class="line-content">
+               <label for="cidade">Cidade</label>
+               <input type="text" name="cidade1" id="cidade" maxlength="28" required>
            </div>
-           <div>
+           <div class="line-content">
                <label for="estados">Estado</label>
-               <select name="estado" id="estados" required>
+               <select name="estado1" id="estados" required>
                </select>
            </div>
-           <div>
+           <div class="line-content">
                <p>Tipo de moradia:</p>   
                <label for="tipo1">
                    <input type="radio" name="tipo" id="tipo1" value="casa">Casa</label> 
@@ -51,7 +51,24 @@
         <br><br>
         <fieldset>
             <label>Último emprego</label>
+            <div class="line-content">
+                <label for="texto-resumo">Resumo do currículo</label>
+                    <textarea name="texto-resumo1" id="texto-resumo" cols="50" rows="30" maxlength="1000" required></textarea>
+            </div>
+            <div class="line-content">
+                <label for="cargo">Cargo</label>
+                <input type="text" name="cargo1" id="cargo" maxlength="40" required>
+            </div>
+            <div class="line-content">
+                <label for="descricao-cargo">Descrição do cargo</label>
+                <input type="text" name="descricao-cargo1" id="descricao-cargo" maxlength="500" required>
+            </div>
+            <div class="line-content">
+                <label for="data-inicio">Data de início</label>
+                <input type="text" name="data-inicio1" id="data-inicio" placeholder="dd/mm/aaaa" required>
+            </div>
         </fieldset>
+        
 
     </form>
 
