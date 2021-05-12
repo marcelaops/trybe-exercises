@@ -31,19 +31,19 @@ function checandoData() {
 }
 checandoData();
 
-//Exer 3 e 4
-function enviarSubmissao(event) {
-    event.preventDefault();
+//Exer 3
+// function enviarSubmissao(event) {
+//     event.preventDefault();
     
-}
+// }
 
-function limpar() {
+// function limpar() {
     
-}
+// }
 
-window.onload = function() {
-    addOptionsStates();
-    let butaoEnviar = document.querySelector('.butao-enviar');
-    butaoEnviar.addEventListener('click', enviarSubmissao);
+// window.onload = function() {
+//     addOptionsStates();
+//     let butaoEnviar = document.querySelector('.butao-enviar');
+//     butaoEnviar.addEventListener('click', enviarSubmissao);
 
-}
+// }
