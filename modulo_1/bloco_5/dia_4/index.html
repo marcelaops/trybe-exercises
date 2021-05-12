@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.4 - Leitor de Conteúdo</title>
+</head>
+<style>
+    #body {
+        margin: 50px;   
+    }
+
+    .options {
+        display: flex;
+    }
+
+    .paragraph {
+        display: flex;
+    }
+
+    .content {
+        display: flex;
+    }
+
+</style>
+<body id='body'>
+    <section id="buttons-section">
+        <div id="buttons-background-color" class="options">
+            <span>Cor de fundo</span>
+            <button>grey</button>
+            <button>black</button>
+        </div>
+        <div id="buttons-text-color" class="options">
+            <span>Cor do texto</span>
+            <button>grey</button>
+            <button>black</button>
+        </div>
+        <div id="text-size" class="options">
+            <span>Tamanho da fonte</span>
+            <button>12pt</button>
+            <button>20pt</button>
+        </div>
+        <div id="space" class="options">
+            <span>Espaçamento entre as linhas</span>
+            <button>normal</button>
+            <button>1,5</button>
+        </div>
+        <div id="font-type" class="options">
+            <span>Tipo de fonte</span>
+            <button>Arial</button>
+            <button>monospace</button>
+        </div>
+    </section>
+    <section id="highlighters-section">
+        <h1 class="highlighters">What is Lorem Ipsum?</h1> <br><br>
+        <h3 class="highlighters3">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." <br>
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h3>
+    </section>
+    <div class="content"> 
+        <p class='paragraph'>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+</div>
+</body>
+<script>
+//Tive dificuldades de fazer esse exercício, então eue studei o gabarito, anotei todos os passos e qd fiquei mto na dúvida eu voltava para ele. 
+
+    window.onload = function(){
+        function setBackgroundColor(color) {
+            let content = document.querySelector('.content')
+            content.style.backgroundColor = color
+            localStorage.setItem('backgroundColor', color)
+        }
+
+        function setTextColor(color) {
+            let paragraphs = document.querySelectorAll('.paragraph');
+            for (let index = 0; index < paragraphs.length; index += 1){
+                paragraphs[index].style.color = color;
+            }
+            localStorage.setItem('fontColor', color);
+        }
+
+        function setFontSize(size) {
+            let paragraphs = document.querySelectorAll('.paragraph');
+            for (let index = 0; index < paragraphs.length; index += 1){
+                paragraphs[index].style.fontSize = size;
+            }
+            localStorage.setItem('fontSize', size);
+        }
+
+        function spaces(size) {
+            let paragraphs = document.querySelectorAll('.paragraph');
+            for (let index = 0; index < paragraphs.length; index += 1){
+                paragraphs[index].style.lineHeight = size;
+            }
+            localStorage.setItem('lineHeight', size);
+        }
+
+        function fontType(fontType) {
+            let paragraphs = document.querySelectorAll('.paragraph');
+            for (let index = 0; index < paragraphs.length; index += 1){
+                paragraphs[index].style.fontFamily = fontType;
+            }
+            localStorage.setItem('fontFamily', fontType);
+        }
+        //Agora vou atribuir aos botões as funçãos
+
+        let backgroundColor = document.querySelectorAll("#buttons-background-color>button");
+        for (let index = 0; index < backgroundColor.length; index += 1){
+            backgroundColor[index].addEventListener("click", function(event) {
+                setBackgroundColor(event.target.innerHTML)
+            })
+        }
+
+        //n consegui entender pq n está alterando a cor .: Desisti por hora, vou p o projeto.
+
+    }
+    
+</script>
+</html>
