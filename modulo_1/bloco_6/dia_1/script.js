@@ -21,12 +21,29 @@ function checandoData() {
     //Formato da expressão regular dd/mm/aaaa visto em https://www.w3resource.com/javascript/form/javascript-date-validation.php
 
     if (data.value.length ===0){
-        alert('A data nâo foi preenchida.');
+        alert('A data de início não foi preenchida.');
     } else if(testandoData.test(data)) {
         return true;
         //se entrar aqui é pq segue as condiçõe de ser uma data.
     } else {
-        alert('A data não tem um formato válido, que é dd/mm/aaaa, tente novamente.');
+        alert('A data de início não tem um formato válido, que é dd/mm/aaaa, tente novamente.');
     }
 }
 checandoData();
+
+//Exer 3 e 4
+function enviarSubmissao(event) {
+    event.preventDefault();
+    
+}
+
+function limpar() {
+    
+}
+
+window.onload = function() {
+    addOptionsStates();
+    let butaoEnviar = document.querySelector('.butao-enviar');
+    butaoEnviar.addEventListener('click', enviarSubmissao);
+
+}
