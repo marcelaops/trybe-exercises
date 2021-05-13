@@ -69,9 +69,10 @@
                 <label  class="form-label"for="descricao-cargo">Descrição do cargo</label>
                 <input class="form-control" type="text" name="descricao-cargo1" id="descricao-cargo" maxlength="500" required>
             </div>
+            <!-- Exer 2 - usando uma bibliotexa javascript de date picker, a PickaDay https://github.com/Pikaday/Pikaday -->
             <div class="form-check">
                 <label class="form-label" for="data-inicio">Data de início</label>
-                <input class="form-control" autocomplete="off" data-validate-field="date" type="text" placeholder="dd/mm/aaaa" id="data-inicio" name="start-date" required>
+                <input class="form-control" autocomplete="off" data-validate-field="date" type="text" placeholder="dd/mm/aaaa" id="data-inicio" name="data-inicio" required>
             </div>
         </div>
         <div class="container form-check">
@@ -81,5 +82,9 @@
     </form>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <!-- exe3 - Para as validações https://github.com/horprogs/Just-validate  -->
+    <script src="./path/to/just-validate.min.js"></script>
+</body>
+
 </body>
 </html>
