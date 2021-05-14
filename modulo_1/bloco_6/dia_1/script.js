@@ -32,14 +32,11 @@ function checandoData() {
 //Tem que chamar ela qd eu fizer o botão enviar, aí embaixo no exercício 3. 
 
 //Exer 3
-// function enviarSubmissao(event) {
-//     event.preventDefault();
-    
-// }
+function enviarSubmissao(event) {
+    event.preventDefault();
+}
 
-// function limpar() {
-    
-// }
+
 
 // window.onload = function() {
 //     addOptionsStates();
