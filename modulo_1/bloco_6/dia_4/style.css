@@ -19,8 +19,6 @@
     display: flex;
     justify-content: center;
     flex-basis: 268px;
-  
-    
   }
   
   .menu-container {
@@ -28,14 +26,13 @@
     flex-basis:  500px;
     order: 1;
     flex-grow: 1;
-    
   }
   
   .menu-container ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    align-items: center;
+    align-self: center;
   }
   
   .menu-container li {
@@ -84,6 +81,8 @@
     flex-direction: column;
     margin: 20px;
     flex-basis: 350px;
+    flex-grow: 1;
+    align-self: center;
   }
   
   .aside-container h3, h4 {
