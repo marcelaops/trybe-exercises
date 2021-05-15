@@ -26,9 +26,17 @@ figure {
         font-size: medium;
         margin: 7% 7%;
     }
+    
     figure {
         float: left;
     }
-    
-    
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: aquamarine;
+        font-size: small;
+        margin: 10% 10%;
+        max-width: 900px;
+    }
 }
