@@ -1,0 +1,39 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+@media screen and (max-width: 800px) {
+      
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%
+
+    }
+
+    body {
+        background-color: salmon;
+        font-size: large;
+        flex-direction: column;
+        margin: 5% 5%;
+    }
+
+    body h1 {
+        font-size: large;
+    }
+
+    body h2 {
+        font-size: medium;
+    }
+}  
+ 
