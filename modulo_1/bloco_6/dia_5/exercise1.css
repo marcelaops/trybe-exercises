@@ -19,3 +19,16 @@ img {
 figure {
     margin: 5px 5px 5px 5px;
 }
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: salmon;
+        font-size: medium;
+        margin: 7% 7%;
+    }
+    figure {
+        float: left;
+    }
+    
+    
+}
