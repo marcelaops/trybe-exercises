@@ -4,6 +4,10 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+ 
+.container {
+    display: flex;
+}  
 
 @media screen and (max-width: 700px) {
       
@@ -46,7 +50,9 @@ html {
     body {
         background-color: blueviolet;
         display: flex;
-        margin: 7% 7%;
+        flex-wrap: wrap;
+        margin: 5%;
+        padding: 20px 40px;
         font-size: medium;
     }
 
@@ -62,7 +68,16 @@ html {
 
 }
 
-/* @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
+    body {
+        background-color: aquamarine;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 2%;
+        padding: 20px;
+        
+    }
+
 
 }
-  */
+ 
