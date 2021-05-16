@@ -97,3 +97,46 @@
     } 
 }
 
+/* Media query para tela pequena (240x320) */
+
+@media screen and (max-width: 400px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0px;
+  }
+
+  img {
+    max-width: 100% ;
+  }
+
+  #navigation ul li {
+    display: block;
+  }
+
+  #navigation ul li a {
+    /* display: flex;
+    flex-direction: column; */
+    float: none;
+    font-size: 8pt;
+  }
+
+  #navigation {
+    width: 70%;
+    margin-top: 65px;
+  }
+
+  #header {
+    width: 100%;
+    font-size: small;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  }
+
+ /* Não estou conseguindo colocar o header fixo, ele aparece fixo qd do po scroll de volta, mas na ida não. */
+
+ 
+}
