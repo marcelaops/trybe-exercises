@@ -80,3 +80,20 @@
     padding: 20px;
     height: 1%;
   }
+
+  /* Media query para página impressa 
+  - Usando media query, tem vários tipos, um deles é o print.
+  - Quando n quer q algum elemento aparece use displya: none.
+     Source: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries*/
+
+  @media print { 
+    #header, #navigation, #footer {
+    display: none;
+    } 
+    
+    #content-container {
+      display: flex;
+      flex-direction: column;
+    } 
+}
+
