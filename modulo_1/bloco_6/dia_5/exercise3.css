@@ -81,7 +81,7 @@
     height: 1%;
   }
 
-  /* Media query para página impressa 
+/* Media query para página impressa 
   - Usando media query, tem vários tipos, um deles é o print.
   - Quando n quer q algum elemento aparece use displya: none.
      Source: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries*/
@@ -95,7 +95,7 @@
       display: flex;
       flex-direction: column;
     } 
-}
+  }
 
 /* Media query para tela pequena (240x320) */
 
@@ -136,6 +136,9 @@
     left: 0px;
   }
 
+  #content {
+    width: fit-content;
+  } 
  /* Não estou conseguindo colocar o header fixo, ele aparece fixo qd do po scroll de volta, mas na ida não. */
 
  
