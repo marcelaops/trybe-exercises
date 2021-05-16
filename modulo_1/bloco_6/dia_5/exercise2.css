@@ -1,16 +1,22 @@
-html {
+/* html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
 
+  .container {
+    display: flex;
+  }
+  
+  p {
+    padding: 20px;
+  }
 
 @media screen and (max-width: 700px) {
       
     header {
         display: flex;
-        align-items: center;
         flex-direction: column;
     }
 
@@ -51,17 +57,21 @@ html {
 @media screen and (min-width: 700px){
     body {
         background-color: blueviolet;
-        display: flex;
         flex-wrap: wrap;
         margin: 5%;
-        padding: 20px 40px;
+        padding: 10px 20px;
         font-size: medium;
+       
+    }
+
+    p {
+        padding: 0 5px;
     }
 
     header {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     header p {
@@ -81,8 +91,38 @@ html {
     }
 
     .container {
-        
+
         flex-direction: row;
     }
 }
- 
+  */
+
+  /*  não estava ficando agradável de ler da maneira q estava, estou tentando mudar... */
+  .container {
+      display: flex;
+  }
+
+  p {
+      padding: 25px;
+  }
+
+  @media screen and (max-width: 700px) {
+      body {
+        background-color: hotpink;
+      }
+
+      .container {
+          flex-direction: column;
+      }
+  }
+
+  @media screen and (min-width: 700px) {
+    body {
+        background-color: aquamarine;
+    };
+
+    .container {
+        flex-wrap: nowrap;
+    }
+
+  }
