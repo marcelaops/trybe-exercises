@@ -32,7 +32,14 @@
 // testingScope(false);
 
 // modificando concatenações p template literals
-const testingScope = (escopo === true) ?  'Não devo ser utilizada fora do meu escopo (if) ótimo, fui utilizada no escopo !' : 'Não devo ser utilizada fora meu escopo (else)';
-
-console.log(testingScope(true));
+const testingScope = (escopo) => {
+        if (escopo === true) {
+          const ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+          console.log(`${ifScope} ótimo, fui utilizada no escopo !`);
+        } else {
+            const elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+          console.log(`${elseScope}`);
+        }
+}
+testingScope(true);
 
