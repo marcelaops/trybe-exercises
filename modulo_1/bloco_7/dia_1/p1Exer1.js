@@ -1,6 +1,5 @@
-// PARTE I
+// PARTE I Exercício 1
 
-//Exercício 1
 //função original: 
 // function testingScope(escopo) {
 //     if (escopo === true) {
