@@ -19,17 +19,20 @@
 // Trocando var  ifScope por let, pois a variável vai ser reatribuida depois. E trocando var elseScope por const. 
 //Também udando p arrow function
 
-const testingScope = (escopo) => {
-    if (escopo === true) {
-      let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
-      ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
-      console.log(ifScope);
-    } else {
-        const elseScope = 'Não devo ser utilizada fora meu escopo (else)';
-      console.log(elseScope);
-    }
-}
+// const testingScope = (escopo) => {
+//     if (escopo === true) {
+//       let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+//       ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+//       console.log(ifScope);
+//     } else {
+//         const elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+//       console.log(elseScope);
+//     }
+// }
+// testingScope(false);
 
-testingScope(false);
+// modificando concatenações p template literals
+const testingScope = (escopo === true) ?  'Não devo ser utilizada fora do meu escopo (if) ótimo, fui utilizada no escopo !' : 'Não devo ser utilizada fora meu escopo (else)';
 
+console.log(testingScope(true));
 
