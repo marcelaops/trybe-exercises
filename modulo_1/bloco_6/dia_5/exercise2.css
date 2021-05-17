@@ -121,9 +121,10 @@ p {
         background-color: aquamarine;
     }
 
-    .aside-one {
-        width: 20%;
+    /* .aside-one {
+        width: 300px;
     }  
+     Eu comentei essa parte pq deu certo sem ela, e antes n tava dando :| */
 
     .container {
         flex-wrap: wrap;
@@ -134,5 +135,5 @@ p {
     body {
         background-color: blueviolet;
     }
-    
-}
+}    
+
