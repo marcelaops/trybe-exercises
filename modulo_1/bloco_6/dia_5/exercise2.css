@@ -121,8 +121,12 @@
         background-color: aquamarine;
     };
 
+    .aside-one {
+        width: 20%;
+    }  
+
     .container {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
   }
