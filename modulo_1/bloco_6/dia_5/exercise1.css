@@ -1,0 +1,42 @@
+body {
+    font-size: larger;
+    margin: 5% 5%;
+
+}
+h1 {
+    font-size: 20pt;
+
+}
+h2 {
+    font-size: 17pt;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+figure {
+    margin: 5px 5px 5px 5px;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: salmon;
+        font-size: medium;
+        margin: 7% 7%;
+    }
+    
+    figure {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: aquamarine;
+        font-size: small;
+        margin: 10% 10%;
+        max-width: 900px;
+    }
+}
