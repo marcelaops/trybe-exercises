@@ -10,4 +10,13 @@ const oddsAndEvens = () => {
     console.log(`Os números ${numbersInOrder} se encontram ordenados de forma crescente!`);
 }
 
-oddsAndEvens();
+// oddsAndEvens();
+
+//bônus - usando o array.sort ~ já usei aí em cima. Mas vou arrumar p ela poder recerber qq array.
+
+const oddsAndEvens2 = (array) => {
+    const numbersInOrder = array.sort((a, b) => a - b);  
+    console.log(`Os números ${numbersInOrder} se encontram ordenados de forma crescente!`);
+}
+
+oddsAndEvens2([10,50,38,95]);
