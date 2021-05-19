@@ -30,7 +30,7 @@ function newString2 (parametro1) {
     )
     return (`${fun1(parametro1)}`);
 }
-// console.log(newString2('Bebeto'));
+const novaString = newString2('Bebeto');
 
 //  Um array com escopo global, que é o escopo do arquivo JS , nesse caso, contendo cinco strings com suas principais skills . -> n tava entendendo q skills eram essa, copiei do gabarito tb.
 
@@ -42,10 +42,14 @@ const skills = ["Android", "iOS", "Architecture", "Teach", "Run"];
 //      HTML; ... #goTrybe".
 
 
-
-function newString2 (parametro1) {
+const newString3 = (parametro) => {
     const fun1 = paramInner => (
         `Tryber ${paramInner} aqui!`  
     )
-    return (`${fun1(parametro1)}`);
+    let result = `${fun1(parametro)}`;
+
+    const skillsAlfabetica = skills.sort();
+    return (`${result} Minhas cinco principais habilidades são: ${skillsAlfabetica}`);
 }
+
+console.log(newString3('Lucas'));    
