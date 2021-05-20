@@ -43,7 +43,16 @@ const order = {
   
   const orderModifier = (order) => {
     // Adicione abaixo as informações necessárias.
-  
+    const modifierName = order.name = 'Luiz Silva';
+    const modifierPayment = order.payment.total = '50,50';
+    console.log(`Olá ${modifierName}, o total do seu pedido de mussarella, calabresa e Coca-Cola Zero é de R$ ${modifierPayment}.`); 
   }
-  
   orderModifier(order);
+
+  //No gabarito ele criou constantes q troco a chave marquerita por muzarella e chamou a coca-cola zero, p depois colocar essas constants no template literal.
+  //Só p lmebrar p pegar o valor das chavese das bebidas:
+  const pizzas = Object.keys(order.order.pizza);
+  console.log(pizzas);
+  const drinks = order.order.drinks.coke.type;
+  console.log(drinks);
+
