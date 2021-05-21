@@ -74,12 +74,14 @@ const getValueByNumber = (object, position) => Object.values(object)[position];
 const verifyPair = (object, key, value) => {
   const properties = [key, value];
   
-  for (index in object){
-    if (Object.entries(object)[index] === properties) {
-      return true;
-    } else {
-      return false;
-    }
+
+  for (let index in object){
+    console.log(index);
+    // if (index !== key) {
+    //   return false;
+    // } else if (index === key && object.turno === value) {
+    //   return true;
+    // }
   }
 }
 console.log(verifyPair(lesson3, 'turno', 'noite'));
