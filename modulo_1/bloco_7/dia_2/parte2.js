@@ -72,19 +72,19 @@ const getValueByNumber = (object, position) => Object.values(object)[position];
 
 
 const verifyPair = (object, key, value) => {
-  const properties = [key, value];
-  
+  const entries = Object.entries(object);
+  for (let index in entries){
+    // const verify = (entries[index][0] === key && entries[index][1] === value) ? `true`: `false`;    Tentei fazer com ternay operator n consegui.
 
-  for (let index in object){
-    console.log(index);
-    // if (index !== key) {
-    //   return false;
-    // } else if (index === key && object.turno === value) {
-    //   return true;
-    // }
+    if (entries[index][0] === key && entries[index][1] === value) {
+      return true;
+  
+    }
   }
+  return false;
 }
 console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'))
 
 
 
@@ -95,11 +95,3 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 
 
 
-// const verifyPair = (object, key, value) => {
-//   if (Object.keys(object) === key && Object.values(object)[key] === value) {
-//     return true;
-//   } else { 
-//     return false;
-//   }
-// }
-// console.log(verifyPair(lesson1, 'turno', 'noite'));
