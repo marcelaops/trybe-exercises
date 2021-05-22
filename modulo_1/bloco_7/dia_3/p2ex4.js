@@ -1,7 +1,15 @@
 //4. Escreva a função findTheNeedle para passar nos testes já implementados.
 
 const assert = require('assert');
-// escreva a função findTheNeedle aqui
+const findTheNeedle = (arrayOfWords, word) => {
+    let position = -1;
+    for (const index in arrayOfWords) {
+        if (arrayOfWords[index] === word) { 
+            position = Number(index); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+        } 
+    } 
+    return position;
+};
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];
 let expected = 3;
