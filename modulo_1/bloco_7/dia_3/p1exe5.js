@@ -1,4 +1,4 @@
-//Compare dois objetos (JSON) para verificar se são idênticos ou não
+//5. Compare dois objetos (JSON) para verificar se são idênticos ou não
 
 
 const assert = require('assert');
@@ -18,4 +18,5 @@ const obj3 = {
   description: 'My Description',
 };
 
-// implemente seus testes aqui
+assert.deepStrictEqual(obj1, obj2);
+assert.notStrictEqual(obj1,obj3);
