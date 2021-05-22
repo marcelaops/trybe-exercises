@@ -1,7 +1,14 @@
-//1Escreva a função addOne para passar nos testes já implementados.
+//1.Escreva a função addOne para passar nos testes já implementados.
 
 const assert = require('assert');
 // escreva a função addOne aqui
+function addOne(array) {
+    let newArray = [];
+    for (let index = 0; index < array.length; index += 1) {
+        newArray.push(array[index]+1);
+    }
+    return newArray;
+}
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
