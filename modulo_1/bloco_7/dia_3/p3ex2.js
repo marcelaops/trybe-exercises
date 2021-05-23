@@ -3,7 +3,7 @@ const assert = require('assert');
 const removeVowels = (word) => {
     const characters = word.split('');
     const results = [];
-  
+    let contador = 0;
     for (let index = 0; index < characters.length; index += 1) {
       if (
         characters[index] === 'a' ||
@@ -12,17 +12,18 @@ const removeVowels = (word) => {
         characters[index] === 'e' ||
         characters[index] === 'u'
       ) {
-        results.push(characters[index]);
+        contador += 1;
+        results.push(contador);
       } else {
-        results.push('_');
+        results.push(characters[index]);
       }
     }
-    return results;
+    return results.join('');  // método join() source https://www.w3schools.com/jsref/jsref_join.asp
 };
 console.log(removeVowels('Dayane'));  
   
-  const parameter = 'Dayane';
-  const result = 'D1y2n3';
+const parameter = 'Dayane';
+const result = 'D1y2n3';
 
-  assert.strictEqual(typeof removeVowels, 'function');
-  assert.deepStrictEqual(removeVowels(parameter), result);
+assert.strictEqual(typeof removeVowels, 'function');
+assert.deepStrictEqual(removeVowels(parameter), result);
