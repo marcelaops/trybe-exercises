@@ -11,5 +11,6 @@ const newEmployees = (callBack) => {
     id2: callBack('Luiza Drumond'), 
     id2: callBack('Carla Paiva '),
 	};
+	return employees;
 };
 newEmployees(object);
