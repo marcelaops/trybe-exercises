@@ -22,8 +22,8 @@ const check = (rightAnswers, studentAnswers) => {
 
 const functionCallback = (rightAnswers, studentAnswers, callBack) => {
     const total = callBack(rightAnswers, studentAnswers);
-    return `O resultada da pontuação do aluno é ${total}`;
+    return `O resultado da pontuação do aluno é ${total}`;
 } 
 
-console.log(functionCallback(rightAnswers, studentAnswers, check(rightAnswers, studentAnswers)));
+console.log(functionCallback(rightAnswers, studentAnswers, check));
 
