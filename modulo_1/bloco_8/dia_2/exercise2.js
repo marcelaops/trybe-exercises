@@ -78,7 +78,7 @@ function smallerName2() {
 }
 // console.log(smallerName2());
 
-// Eu tinha feito da maneira á cima, olhei o gabairto e concertei abaixo 
+// Eu tinha feito da maneira á cima e estava dando erro no length, olhei o gabairto e concertei abaixo 
 function smallerName() {
   let nameBook;
   

@@ -62,22 +62,12 @@ const books = [
     releaseYear: 1928,
   },
 ];
-//3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
-
+//5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
 // Adicione o código do exercício aqui:
-const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin',
-  },
-  genre: 'Fantasia',
-  id: 1,
-  name: 'As Crônicas de Gelo e Fogo',
-  releaseYear: 1991,
-};
+const expectedResult = false;
 
-function getNamedBook() {
+function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
 }
 
-assert.deepStrictEqual(getNamedBook(), expectedResult);
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
