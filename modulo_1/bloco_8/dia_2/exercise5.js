@@ -62,12 +62,14 @@ const books = [
     releaseYear: 1928,
   },
 ];
+
 //5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
 // Adicione o código do exercício aqui:
 const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
+  return books.every((autoras) => autoras.author.birthYear > 1900 && autoras.author.birthYear <= 2000);  // Olhando o gabarito depois de ter feito percebi q tenhoq ter cuidado com o q estou pensando que entra como parâmetro para a função arrow. É um elemento da array. 
 }
-
+// console.log(everyoneWasBornOnSecXX());
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
