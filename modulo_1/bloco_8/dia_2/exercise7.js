@@ -68,6 +68,26 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
-}
+  let primeiroAutor;
+  return books.some((book) => {
+      if (book.author.birthYear === primeiroAutor) {
+          primeiroAutor = book.author.birthYear
+      }
 
-assert.strictEqual(authorUnique(), expectedResult);
+  })
+}
+// console.log(authorUnique());
+
+// assert.strictEqual(authorUnique(), expectedResult);
+
+//Eu achei q estava cero, mas daí troquei a data de nascimento q tinha repetida e mesmo assim deu false, ou seja, função está com lógica errada. Olhando o gabarito:
+
+function authorUnique2() {
+    // escreva seu código aqui
+  return books.every((book) => 
+      !books.some((bookSome) =>
+          (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name)));
+  }
+console.log(authorUnique2());
+  
+assert.strictEqual(authorUnique2(), expectedResult);
