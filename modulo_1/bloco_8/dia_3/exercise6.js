@@ -63,4 +63,17 @@ const books = [
   },
 ];
 
+//6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
 // Adicione o código do exercício aqui:
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  // escreva seu código aqui
+}
+
+assert.deepStrictEqual(oldBooks(), expectedResult);
