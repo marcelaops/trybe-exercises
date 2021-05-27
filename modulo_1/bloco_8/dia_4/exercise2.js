@@ -63,7 +63,7 @@ const books = [
   },
 ];
 
-//2. 2 - Crie uma string com os nomes de todas as pessoas autoras.
+// 2 - Crie uma string com os nomes de todas as pessoas autoras.
 
 // Adicione o código do exercício aqui:
 
