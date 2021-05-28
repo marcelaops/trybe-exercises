@@ -63,11 +63,17 @@ const books = [
   },
 ];
 
+const expectedResult = 'As Crônicas de Gelo e Fogo'; // no enunciado do exercício n tinha, eu q coloquei.
 // 4 - Encontre o livro com o maior nome.
 // Adicione o código do exercício aqui:
 
 function longestNamedBook() {
   // escreva seu código aqui
+	// dava p usar o filter, mas ele quer q usemos só o reduce.
+	let longest = '';
+	books.reduce((acc, curr) => (curr.name.length > acc.name.length) ? (longest = curr) : (longest = acc));
+	return longest.name;
 }
+// console.log(longestNamedBook());
 
 assert.deepStrictEqual(longestNamedBook(), expectedResult);
