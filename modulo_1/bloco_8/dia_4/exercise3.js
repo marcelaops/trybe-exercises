@@ -70,6 +70,10 @@ const expectedResult = 43;
 
 function averageAge() {
   // escreva seu código aqui
+  const ageSum = books.reduce((acc, curr) => (acc + (curr.releaseYear - curr.author.birthYear)), 0); // Antes estava dando erro, pq estava esquecendo desse currentValue q nesse caso é 0.
+	const totalBooks = books.length;
+  // books.reduce((callback, acc, curr) => callback(acc, curr));
+	return (ageSum / totalBooks);
 }
-
+// console.log(averageAge());
 assert.strictEqual(averageAge(), expectedResult);
