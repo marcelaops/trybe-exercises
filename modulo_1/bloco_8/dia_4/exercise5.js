@@ -22,7 +22,7 @@ function containsA2() {
   }, 0);  
 
 })};
-
+console.log(containsA2());
 
 // n estava conseguindo resolver então olhei o gabarito...
 
@@ -33,6 +33,6 @@ function containsA() {
       if (curr === 'a' || curr === 'A') return acc + 1;
       return acc;
     }, 0), 0);
-}
+  }
 
 assert.deepStrictEqual(containsA(), 20);
