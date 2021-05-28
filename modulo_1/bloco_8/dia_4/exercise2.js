@@ -67,10 +67,11 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = 43;
 
-function averageAge() {
+
+function allAuthors() {
   // escreva seu código aqui
+    return books.reduce((acc, curr) => acc.author.name + curr.author.name);
 }
+console.log(allAuthors());
 
-assert.strictEqual(averageAge(), expectedResult);
