@@ -67,13 +67,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-
-
 function allAuthors() {
   // escreva seu código aqui
     // const stringNames = [];
-    return books.reduce((acc, curr) => acc.concat(curr.author.name), []);
+    const authors = books.reduce((acc, curr) => acc.concat(curr.author.name), '');
     // o resultado disso é uma array e ele pede uma string...
+    return authors.join(' '); 
+    // tentei usar o joint porem acusa q ele n é uma função
 }
 console.log(allAuthors());
 
