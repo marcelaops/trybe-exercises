@@ -70,10 +70,17 @@ const books = [
 function allAuthors() {
   // escreva seu código aqui
     // const stringNames = [];
-  return books.reduce((acc, curr) => acc.concat(' ', curr.author.name), '');
+  const author = books.reduce((acc, curr, index) => { 
+    if (index === books.length - 1) { return acc.concat(curr.author.name, '.') };
+    return acc.concat(curr.author.name, ', ');
+  }, '');
   
-  // return authors;
+  return author;
 }
-console.log(allAuthors());
-  
+// console.log(allAuthors());
+
+const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
   // tentei usar o joint porem acusa q ele n é uma função
+
+assert.strictEqual(allAuthors(), expectedResult);
+  
