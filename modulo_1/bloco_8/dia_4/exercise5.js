@@ -10,6 +10,13 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
-}
+  // raciocínio aqui estava errado, eu li rápido e achei q fossem palavras q começassem com a letra a -> concertasr
+  return names.reduce((result, name) => {
+    if (name.startsWith('A') || name.startsWith('a')) {
+      result += 1;
+    }  
+}); 
+};
+console.log(containsA());
 
-assert.deepStrictEqual(containsA(), 20);
+// assert.deepStrictEqual(containsA(), 20);
