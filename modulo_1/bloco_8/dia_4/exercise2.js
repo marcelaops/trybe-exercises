@@ -70,10 +70,10 @@ const books = [
 function allAuthors() {
   // escreva seu código aqui
     // const stringNames = [];
-    const authors = books.reduce((acc, curr) => acc.concat(curr.author.name), '');
-    // o resultado disso é uma array e ele pede uma string...
-    return authors.join(' '); 
-    // tentei usar o joint porem acusa q ele n é uma função
+  return books.reduce((acc, curr) => acc.concat(' ', curr.author.name), '');
+  
+  // return authors;
 }
 console.log(allAuthors());
-
+  
+  // tentei usar o joint porem acusa q ele n é uma função
