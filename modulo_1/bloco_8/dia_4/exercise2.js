@@ -71,7 +71,9 @@ const books = [
 
 function allAuthors() {
   // escreva seu código aqui
-    return books.reduce((acc, curr) => acc.author.name + curr.author.name);
+    // const stringNames = [];
+    return books.reduce((acc, curr) => acc.concat(curr.author.name), []);
+    // o resultado disso é uma array e ele pede uma string...
 }
 console.log(allAuthors());
 
