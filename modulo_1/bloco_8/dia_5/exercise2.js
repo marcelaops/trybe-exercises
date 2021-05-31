@@ -3,9 +3,8 @@
 const assert = require('assert');
 
 // escreva sum abaixo
-const sum = (...numbers) => numbers.reduce((acc, curr) => acc + curr, 0); 
+const sum = (...numbers) => { return numbers.reduce((acc, curr) => acc + curr, 0)}; 
 
-// eu tinha colocado a segunda arrow function, a numbers.reduce entre chaves e deu erro, n entendi.
 
 assert.strictEqual(sum(), 0);
 assert.strictEqual(sum(1), 1);
