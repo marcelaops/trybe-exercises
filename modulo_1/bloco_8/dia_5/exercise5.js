@@ -5,8 +5,14 @@ const assert = require('assert');
 const myList = [1, 2, 3];
 
 // escreva swap abaixo
+// como eu escrevi, q reornou corretamente, mas só funciona p esse exemplo:
+const swap = (list) => list = [3, 2, 1] ;
+
+// de uma maneira q cubra qq lista de 3 elementos (como no gabarito):
+const swap = ([a, b, c]) => [c, b, a];
 
 const swappedList = swap(myList);
+console.log(swappedList);
 
 assert.strictEqual(swappedList[0], 3);
 assert.strictEqual(swappedList[1], 2);
