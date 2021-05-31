@@ -16,7 +16,13 @@ const gunnar = {
 };
 
 // complete a assinatura da função abaixo
-const personLikes = () => `${name} is ${age} years old and likes ${likes.join(', ')}.`;
+const personLikes = (person) => `${person.name} is ${person.age} years old and likes ${person.likes.join(', ')}.`;
+
+// Do jeito q fiz acima está deu certo. Ao ver o gabarito percebi que abordei de maneira errada o object destructuring. Eu chamei as chaves do objeto dentro da função, ao invés de atribuir as chaves como parâmetro da função. O gabarito:
+const personLikes = ({ name, age, likes }) => ( `${name} is ${age} years old and likes ${likes.join(', ')}.`);
+console.log(personLikes(alex));
+
+
 
 assert.strictEqual(personLikes(alex), 'Alex is 26 years old and likes fly fishing.');
 assert.strictEqual(personLikes(gunnar), 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.');
