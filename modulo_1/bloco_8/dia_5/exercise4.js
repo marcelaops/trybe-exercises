@@ -32,7 +32,14 @@ const people = [
 
 // escreva filterPeople abaixo
 
-const filteredPeople = filterPeople(people);
+const filterPeople = (person) => { 
+  return person.filter(({ bornIn, nationality }) => (bornIn >= 1901 && bornIn <= 2000 && nationality === 'Australian'));
+}
+const filteredPeople = filterPeople(people);  
+
+// nesse exercícios estava tentando usar o map antes, dai depois de olhar o gabarito percebi que o filter cabia melhor.
+
+console.log(filteredPeople);
 
 assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
 assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
