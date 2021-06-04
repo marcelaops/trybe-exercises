@@ -1,0 +1,1 @@
+// Agora, dado o código abaixo, qual a ordem de finalização de execução das linhas comentadas?
