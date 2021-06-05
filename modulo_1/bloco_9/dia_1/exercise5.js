@@ -11,7 +11,19 @@ const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9/5) + 32;
 const temperatureInFahrenheit = (temperature) => console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
 const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-// definição da função sendMarsTemperature...
+// definição da função sendMarsTemperature... 
+//(dei uma ajusatado da que eu fiz no exercise 4 apenas colocando o messageDelay() e depois desenvolvi o pedido nesse exercício)
+const sendMarsTemperature = ((callback) => {
+  setTimeout (() => callback(getMarsTemperature()),  messageDelay());
+})
+
+// Deu certo, só p ficar registrado o:
+// Gabarito
+const sendMarsTemperature = (onSuccess) => {
+  const currentTemperature = getMarsTemperature();
+  setTimeout(() => onSuccess(currentTemperature), messageDelay());
+};
+
 
 
 sendMarsTemperature(temperatureInFahrenheit); // imprime "It is currently 47ºF at Mars", por exemplo
