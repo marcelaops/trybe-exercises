@@ -8,6 +8,17 @@ const getMarsTemperature = () => {
 };
 
 // crie a função sendMarsTemperature abaixo
-
+// Abaixo o que eu fiz:
+const sendMarsTemperature = (() => {
+  setTimeout (() => console.log(`Mars temperature is: ${getMarsTemperature()} degree Celsius `), 5000);
+})
 
 sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
+
+// Abaixo o gabarito:
+const sendMarsTemperature = () => {
+  const currentTemperature = getMarsTemperature();
+  setTimeout(() => console.log(`Mars temperature is: ${currentTemperature} degree Celsius`), messageDelay());
+};
+
+// Ambos iguais resultados, mas como eu provavelmente deveria ter usado a funcmessageDelay, a construção da func sendMarsTemperature fica melhor da maneira do gabarito. 
