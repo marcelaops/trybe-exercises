@@ -22,44 +22,28 @@ promise
 
 // 3. Quando a promise for resolvida com sucesso, retorne um array com 4 itens, sendo eles o resultado da divisão do numero resultante por 2, 3, 5 e 10.
 
-// Eu tinha feito da aneira abaixo, porém não estava conseguindo dar o console.log, aparecia o NaN da maneira q estava fazendo. Então olhei o gabarito e refiz da maneira ábaixo desse aí.
-const promise = new Promise((resolve, reject) => {
-    const arrayNumber = [];
-    for (let index = 0; index < 9; index += 1) {
-        const number = Math.floor(Math.random() * 51);
-        arrayNumber.push(number);
-    }
-    const square = arrayNumber.map((number) => number * number);
-    const sumArray = square.reduce((acc, curr) => acc + curr);
-    console.log(sumArray);
-    if (sumArray > 8000) {
-        return reject();
-    }
-    resolve();
-})
-.then(sumArray => console.log([2, 3, 5, 10].map(number => sumArray / number)))
-.catch(() => console.log('Promise rejeitada'));
-
-// Para dar certo e sair uma array fiz da maneira abaixo, porém n deu certo, continuou saindo a array [ NaN, NaN, NaN, NaN ], ou seja, meu erro foi na lógica do promise.
+// Eu tinha feito da diferente, mas depois de ver os resursos adicionais e o gabarito percebi que era melhor colocar a promisse dentro de uma outra função para conseguir, sendo que a array da suma dividivo pela array [2, 3, 5, 10] ainda está saindo [ NaN, NaN, NaN, NaN ]
 const fetchPromise = () => {
-    const promise = new Promise((resolve, reject) => {
-        const arrayNumber = [];
-        for (let index = 0; index < 9; index += 1) {
-            const number = Math.floor(Math.random() * 51);
-            arrayNumber.push(number);
-        }
-        const square = arrayNumber.map((number) => number * number);
-        const sumArray = square.reduce((acc, curr) => acc + curr);
-        console.log(sumArray);
-        if (sumArray > 8000) {
-            return reject();
-        }
-        resolve();
-    })
-    .then(sumArray => console.log([2, 3, 5, 10].map(number => sumArray / number)))
-    .catch(() => console.log('Promise rejeitada'));
-};
+	const promise = new Promise((resolve, reject) => {
+		const arrayNumber = [];
+		for (let index = 0; index < 10; index += 1) {
+				const number = Math.floor(Math.random() * 51);
+				arrayNumber.push(number);
+		}
+		const square = arrayNumber.map((number) => number * number);
+		console.log(square);
+		const sumArray = square.reduce((acc, curr) => acc + curr);
+		console.log(sumArray);
+		if (sumArray > 8000) {
+				return reject();
+		}
+		resolve();
+	});
 
+	promise
+		.then(sumArray => console.log([2, 3, 5, 10].map(number => sumArray / number)))
+		.catch(() => console.log('Promise rejeitada'));
+};
 fetchPromise();
 
 // No gabarito:
@@ -76,8 +60,9 @@ const fetchPromise = () => {
   });
 
   myPromise
-    .then(sum => [2, 3, 5, 10].map(number => sum / number))
+    .then(sum => console.log([2, 3, 5, 10].map(number => sum / number)))
     .catch(() => console.log('Promise rejeitada'));
+	
 };
 
 fetchPromise();
