@@ -69,21 +69,24 @@ fetchPromise()
 
 // 5. Quando a Promise for bem-sucedida, encadeie nela uma segunda Promise que some os elementos do array.
 const fetchPromise = () => {
-  const myPromise = new Promise((resolve, reject) => {
-    const myArray = Array.from(
-      { length: 10 },
-      () =>  Math.floor(Math.random() * 50) + 1
-    );
-    const sum = myArray.map(number => number * number)
-                       .reduce((number, acc) => number + acc, 0);
+	const promise = new Promise((resolve, reject) => {
+		const arrayNumber = [];
+		for (let index = 0; index < 10; index += 1) {
+				const number = Math.floor(Math.random() * 51);
+				arrayNumber.push(number);
+		}
+		const square = arrayNumber.map((number) => number * number);
+		// console.log(square);
+		const sumArray = square.reduce((acc, curr) => acc + curr);
+		console.log(sumArray);
+		sumArray < 8000 ? resolve(sumArray) : reject()
+	});
 
-    (sum < 8000) ? resolve(sum) : reject();
-  });
-
-  myPromise
-	.then(sum => console.log([2, 3, 5, 10].map(number => sum / number)))
-	.then(array => console.log(array.reduce((number, acc) => number + acc, 0)))
-	.catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'))
+	promise
+		.then(sumArray => [2, 3, 5, 10].map(number => sumArray / number))
+		.then(array => (array.reduce((number, acc) => number + acc, 0)))
+		.catch(() => console.log('É mais de oito mil! Essa promise deve estar quebrada!'));
 };
-
 fetchPromise();
+
+// O número 5 estava dando erro, pq eu estava dando console.log dentro dos then's.
