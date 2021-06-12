@@ -9,3 +9,17 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
+module.exports = myRemove;
+
+// // tava tentando transformar essa func acima em HOF, desisti no meio do caminho.
+// const myRemove = (arr, item) => {
+
+//   arr.reduce((newArray, item) => {
+//     const item
+//     if (newArray[0] !== item) newArray[0].push(item); 
+//     return newArray;
+//   }
+//   , []);
+// }
+// console.log(myRemove([1, 2, 3, 4], 3));
+
