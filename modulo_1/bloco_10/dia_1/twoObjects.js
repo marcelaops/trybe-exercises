@@ -14,3 +14,6 @@ const obj3 = {
   title: 'My Different Title',
   description: 'My Description',
 };
+module.exports = obj1;
+module.exports = obj2;
+module.exports = obj3;
