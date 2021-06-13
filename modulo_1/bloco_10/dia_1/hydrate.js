@@ -16,12 +16,34 @@
 // retorno da função
 '2 copos de água'
 
+// const hydrate = (string) => {
+//   const arrayString = string.split('');
+//   const elements = arrayString.reduce((acc, curr) => {
+// 		let number = parseInt(curr);  
+//     if (number === NaN) { return acc + number };
+//     return acc;
+//   }, 0);
+//   const copo = elements === 1 ? 'copo' : 'copos';
+//   return `${elements} ${copo} de água`; 
+// };
+// console.log(hydrate('1 cerveja'))
+
+// n tava dando certo, gabarito:
+
+// hydrate.js
 const hydrate = (string) => {
-    const arrayString = string.split('');
-    arrayString.reduce((acc, curr) => {
-        
-    }, '')
+  const splitString = string.split('');
+  const result = splitString.reduce((glassesOfWater, character) => {
+    let parsedCharacter = parseInt(character);
+    let checkCharacter = isNaN(parsedCharacter) === false;
+    if (checkCharacter) { return glassesOfWater + parsedCharacter };
+    return glassesOfWater;
+  }, 0);
+
+  const pluralGlass = result === 1 ? 'copo' : 'copos';
+  return `${result} ${pluralGlass} de água`;
 };
-console.log(hydrate('1 cerveja'))
+console.log(hydrate('1 cerveja'));
+
 
 module.exports = hydrate;
