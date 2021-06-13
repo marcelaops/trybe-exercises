@@ -14,3 +14,5 @@ describe('Compare dois objetos para verificar se são idênticos ou não', () =>
         expect(obj1).not.toEqual(obj3);
     });
 });
+
+// não estou conseguindo testar que 2 objetos são diferentes.
