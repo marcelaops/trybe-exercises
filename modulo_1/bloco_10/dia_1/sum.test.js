@@ -1,0 +1,34 @@
+// A função sum(a, b) retorna a soma do parâmetro a com o b
+// Teste se o retorno de sum(4, 5) é 9
+// Teste se o retorno de sum(0, 0) é 0
+// Teste se a função sum lança um erro quando os parâmetros são 4 e "5" (string 5)
+// Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
+
+// implemente seus testes aqui
+
+const { it, expect } = require('@jest/globals');
+const sum = require('./sum');
+
+describe('Parte I Exercício 1', () => {
+    it('Teste se o retorno de sum(4, 5) é 9', () => {
+        expect(9).toBe(sum(4, 5));
+    });
+
+    it('Teste se o retorno de sum(0, 0) é 0', () => {
+        expect(0).toBe(sum(0, 0));
+    });
+
+    it('Teste se a função sum lança um erro quando os parâmetros são 4 e "5" (string 5)', () => {  
+        expect(() => { 
+            sum(4, '5');
+        }).toThrow();
+    });
+    
+    it('Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")', () => {
+        expect(() => {
+            sum(4, '5');
+        }).toThrow("parameters must be numbers");
+    });
+});
+
+// Os 2 primeiros tipos de testes eu estava fazendo com a mesma lógica dos vídeos do conteúdo. Fui olhar o gabarito e vi que lá o  o expect é o que recebe a função e o que vem depois, o toBe é o que resebe o número. Nos dois primeiros testes não atrapalhou a lógica, apenas no 3º.
