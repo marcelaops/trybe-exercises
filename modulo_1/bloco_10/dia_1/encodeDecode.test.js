@@ -103,4 +103,4 @@ describe('Testa a função encode e decode', () => {
   it('checa se o retorno da função tem o mesmo número de caracteres', () => {
     expect(decode('trybe').length).toEqual(5);
   });
-});
+}); 
