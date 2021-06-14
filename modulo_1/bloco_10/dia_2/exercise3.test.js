@@ -21,13 +21,19 @@ const getUserName = (userID) => {
 // Dica: Utilize o try/catch para o caso de erro.
 
 describe('Teste se o usuário é encontrado ou não', () => {
-    it('Quando o usuário é encontrado', () => {
-        expect.assertions(1);
-        return getUserName(4).then(user => expect(user).toEqual('Mark'));
+    it('Quando o usuário é encontrado', async () => {
+      expect.assertions(1);
+      const user = await getUserName(4);
+      expect(user).toEqual('Mark');
     });
-    
-    it('Quando o usuário não é encontrado', () => {
-        expect.assertions(1);
-        return getUserName(1).catch(error => expect(error).toEqual({ error: 'User with 1 not found.' }));
+
+    it('Quando o usuário não é encontrado', async () => {
+      expect.assertions(1);
+      try {
+        await getUserName(1);
+      } catch (error) {
+        expect(error).toEqual({ error: 'User with 1 not found.' });
+      }
     });
+  
 });
