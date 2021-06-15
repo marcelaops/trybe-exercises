@@ -57,10 +57,14 @@ function mapString(objectMap, string) {
   const splitString = string.split('');
   const mappedArray = splitString.map((character) => {
     if(objectMap[character]) {
+      console.log(character);
+      // console.log(objectMap[character]);
       return objectMap[character];
     }
+    console.log(character);
     return character;
   });
+  // console.log(mappedArray.join(''));
   return mappedArray.join('');
 }
 
@@ -84,5 +88,7 @@ function decode(string) {
   };
   return mapString(map, string);
 }
+
+encode('ana');
 // const functions = { encode, decode };
 // module.exports = functions;
