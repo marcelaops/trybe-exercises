@@ -1,12 +1,14 @@
 import React from 'react';
-import Pokemon from './Pokemon';
+// import Pokemon from './Pokemon';
 import './App.css';
 import pokemons from './data';
+import Pokedex from './Pokedex';
 
 function App() {
   return (
-    <div>
-      {pokemons.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.id} />)}
+    <div className='App'>
+      <h2 className='titulo'>Pokedex</h2>
+      <Pokedex pokemons={pokemons} />
     </div>
   );
 }
