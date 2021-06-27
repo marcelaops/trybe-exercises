@@ -10,32 +10,38 @@ export default class Form extends Component {
     this.handleChange = this.handleChange.bind(this)
 
     this.state = {
-      nome: '',
+      name: '',
       email: '',
       cpf: '',
-      endereco: '',
-      estado: '',
-      tipoDeMoradia: '',
+      adress: '',
+      state: '',
+      typeHousing: '',
     }
   }
 
   handleChange({ target }) {
     const { name, value } = target
 
-    if(name === )
+    if(name === 'name') 
     this.setState({
       [name]: value
     })
   }
   
   render() {
-    const { nome, emai, cpf, endereco, esatdo, tipoDeMoradia } = this.state;
+    const { name, emai, cpf, adress, state, typeHousing } = this.state;
 
     return(
-      <fieldset>
-        <h2>Dados Pessoais</h2>
-        <PersonalFieldset />
-      </fieldset>
+      <div>
+        <form>
+        <PersonalFieldset 
+          nameValue = { name }
+        />
+
+        <ProfessionalFieldset />
+
+        </form>
+      </div>
     );
   }
 }
