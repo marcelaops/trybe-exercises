@@ -33,6 +33,19 @@ export default class PersonalData extends Component {
             ? ' -email inválido- ' : ' -ok- ' }
         </label>
 
+        <label htmlFor="email">
+          Email:
+          <input
+            id="email"
+            name="email"
+            type="email"
+            onChange={ handleChange }
+            value={ emailValue }
+          />
+          { !emailValue.match(/^\S+@\S+$/i)
+            ? ' -email inválido- ' : ' -ok- ' }
+        </label>
+
 
       </fieldset>
     );
