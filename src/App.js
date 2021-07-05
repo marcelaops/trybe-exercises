@@ -18,10 +18,6 @@ class App extends Component {
           </ul>
         </nav>
 
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/users" component={Users}/>
-
         <Switch>
           <Route
             path="/users/:id"
@@ -31,9 +27,7 @@ class App extends Component {
           <Route exact path="/" component={ Home }/>
           <Route
             path="/strict-access"
-            render={ () => (<StrictAccess user={ { username: 'joao', password: '1234' } } />
-      )}
-    />
+            render={ () => (<StrictAccess user={ { username: 'joao', password: '1234' } } />)} />
         </Switch>
       </BrowserRouter>
     );
