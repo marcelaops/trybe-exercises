@@ -18,7 +18,7 @@ class App extends Component {
 
         <Route exact path="/" component={Home}/>
         <Route exact path="/about" component={About}/>
-        <Route exact path="/users" component={Users}/>
+        <Route exact path="/users" render={() =>  <Users greetingsMessage="Good Morning" />} />
       </BrowserRouter>
     );
   }
