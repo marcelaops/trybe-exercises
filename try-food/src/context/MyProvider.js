@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MyContext from './MyContext';
 
 function MyProvider({ children }) {
-  /* Passo 1 */
+  /* Passo 1 olhei o gabarito p a resolução desses passos */
   const [orderList, setOrderList] = useState({
     comida: [],
     bebida: [],
@@ -20,17 +20,20 @@ function MyProvider({ children }) {
     }
   };
 
-  /* Passo 8 */
+  /* Passo 8 - Remo um item da lista */
   const removeItemFromList = (orderState, indexPresentInList, itemType) => {
-    setOrderList();
+    orderState.splice(indexPresentInList, 1);
+    setOrderList({ ...orderList,
+      [itemType]: orderState });
   };
 
-  /* Passo 9 */
-  const updateValueItemInList = (orderState, indexPresentInList, newItem) => {
-    setOrderList();
+  /* Passo 9 - atualização do produto na lista */
+  const incrementItemInList = (orderState, indexPresentInList, newItem) => {
+    orderState.splice(indexPresentInList, 1, newItem);
+    setOrderList({ ...orderList, [newItem.itemType]: orderState });
   };
 
-  /* Passo 7 */
+  /* Passo 7 - incrementa o valor de um produto */
   const manageItemsInList = (newItem) => {
     const noQuantity = 0;
     const orderState = orderList[newItem.itemType];
@@ -38,12 +41,14 @@ function MyProvider({ children }) {
     if (Number(newItem.quantity) === noQuantity) {
       return removeItemFromList(orderState, indexPresentInList, newItem.itemType);
     }
-    updateValueItemInList(orderState, indexPresentInList, newItem);
+    incrementItemInList(orderState, indexPresentInList, newItem);
+    // updateValueItemInList(orderState, indexPresentInList, newItem);
   };
 
-  /* Passo 6 */
+  /* Passo 6 - apebas add um novo item */
   const addItemToList = (newItem) => {
-    setOrderList();
+    setOrderList({ ...orderList,
+      [newItem.itemType]: [...orderList[newItem.itemType], newItem] });
   };
 
   /* Passo 2 */
@@ -51,6 +56,8 @@ function MyProvider({ children }) {
     /* Passo 3 */
     const { value } = target;
 
+    /* Passo 4 */
+    const isPresentInList = orderList[itemType].some((item) => item.id === itemName);
     const newItem = {
       id: itemName,
       quantity: value,
@@ -58,13 +65,9 @@ function MyProvider({ children }) {
       itemType,
     };
 
-    /* Passo 4 */
-    const isPresentInList = '';
+    /* Passo 5 - atualiza um produto já existente na lista  e add um novo produto */
+    if (!isPresentInList) return addItemToList(newItem);
 
-    /* Passo 5 */
-    if (!isPresentInList) {
-      return addItemToList(newItem);
-    }
     manageItemsInList(newItem);
   };
 
