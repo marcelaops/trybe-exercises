@@ -4,6 +4,12 @@ import Posts from './components/Posts';
 import Selector from './components/Selector';
 import { Context } from './components/RedditContext';
 
+// function App() {
+//   return (
+
+//   );
+// } 
+
 class App extends Component {
   componentDidMount() {
     const { fetchPosts } = this.context;
