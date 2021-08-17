@@ -1,4 +1,4 @@
-import React, { Component, createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { getPostsBySubreddit } from '../services/redditAPI';
@@ -6,27 +6,36 @@ import { getPostsBySubreddit } from '../services/redditAPI';
 const Context = createContext();
 const { Provider, Consumer } = Context;
 
+function RedditProvider({ children }) {
+  const [ postsBySubreddit, setPostsBySubreddit ] = useState({
+    frontend: {},
+    reactjs: {},
+  });
+  const [ selectedSubreddit, setSelectedSubreddit ] = useState('reactjs');
+  const [  shouldRefreshSubreddit, setShouldRefreshSubreddit ] = useState(false);
+  const [ isFetching, setIsFetching ] = useState(false);
+
+  useEffect(() => {
+    const { state } = this;
+    const { shouldRefreshSubreddit } = state;
+    const selectedSubredditChanged = prevState.selectedSubreddit !== state.selectedSubreddit;
+
+    if (selectedSubredditChanged || shouldRefreshSubreddit) {
+      this.fetchPosts();
+    }
+  })
+
+
+
+  return (
+    <Context.Provider value={context}>
+        {children}
+    </Context.Provider>
+  );
+} 
+
 class RedditProvider extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      postsBySubreddit: {
-        frontend: {},
-        reactjs: {},
-      },
-      selectedSubreddit: 'reactjs',
-      shouldRefreshSubreddit: false,
-      isFetching: false,
-    };
-
-    this.fetchPosts = this.fetchPosts.bind(this);
-    this.shouldFetchPosts = this.shouldFetchPosts.bind(this);
-    this.handleFetchSuccess = this.handleFetchSuccess.bind(this);
-    this.handleFetchError = this.handleFetchError.bind(this);
-    this.handleSubredditChange = this.handleSubredditChange.bind(this);
-    this.handleRefreshSubreddit = this.handleRefreshSubreddit.bind(this);
-  }
 
   componentDidUpdate(_prevProps, prevState) {
     const { state } = this;
@@ -123,9 +132,7 @@ class RedditProvider extends Component {
     };
 
     return (
-      <Provider value={context}>
-        {children}
-      </Provider>
+  
     );
   }
 }
