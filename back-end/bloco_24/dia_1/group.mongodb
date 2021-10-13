@@ -1,0 +1,36 @@
+// Para Fixar
+// Utilizando o banco de dos agg_example e a coleção transactions , faça os exercícios:
+// Selecione todos os bancos, ou seja, valores do campo bank ;
+use("agg_example");
+db.transactions.aggregate([{ 
+  $group: { _id: "$bank", bank: { $sum: 1 }} 
+}]);
+
+// Selecione o valor total das transações em cada banco e quantas são;
+use("agg_example");
+db.transactions.aggregate([{ 
+  $group: { 
+    _id: "$bank", 
+    "valorTotal": { $sum: "$value" },
+    transações: { $sum: 1 }
+  } 
+}]);
+
+// Selecione o valor total de transações por banco;
+use("agg_example");
+db.transactions.aggregate([{ 
+  $group: {
+    _id: "$bank",
+    "valorTotalDeTransações": { $sum: "$value" }
+  }
+}]);
+
+// Selecione os bancos que têm o valor total de transações maior que 1000.
+use("agg_example");
+db.transactions.aggregate([
+  { $group: {
+    _id: "$bank",
+    "valorTotalDeTransações": { $sum: "$value" }
+  }},
+  { $match: { valorTotalDeTransações: { $gt: 1000 } } }
+]);
