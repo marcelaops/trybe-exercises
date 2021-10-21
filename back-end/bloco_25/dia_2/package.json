@@ -1,0 +1,12 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "Resolve of exercises 1, 2 and 3 of the day 25.2",
+  "main": "index.js",
+  "scripts": {
+    "exercise1-2-3": "node exercise1-2-3.js",
+    "exercise4": "node exercise4.js"
+  },
+  "author": "Marcela",
+  "license": "ISC"
+}
