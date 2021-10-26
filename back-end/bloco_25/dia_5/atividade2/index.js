@@ -1,6 +1,6 @@
 const express = require("express");
 
-const auth = require("./controllers/authorization");
+const auth = require("./middlewares/authorization");
 const fetchApi = require("./middlewares/fetch");
 
 const app = express();
