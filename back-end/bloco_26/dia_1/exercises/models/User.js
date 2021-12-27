@@ -33,6 +33,13 @@ const create = ({ firstName, lastName, email, password }) =>
     .then((db) => db.collection('users').insertOne({ firstName, lastName, email, password }))
     .then(result => format({ id: result.insertedId, firstName, lastName, email  }));
 
+
+// 2
+// const getAll = async () => {
+//   return connection()
+//     .then((db) => db.collection)
+// }
+
 module.exports = {
   isValid,
   create,
