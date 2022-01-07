@@ -15,7 +15,11 @@ app.post('/user', middlewares.createUser);
 app.use(middlewares.error);
 
 // 2
-// app.get('/user', middlewares.)
+app.get('/users', async (req, res) => {
+  const users = await User.getAll();
+
+  
+});
 
 app.listen(PORT, () => {
   console.log(`Ouvindo a porta ${PORT}`);
